@@ -1,9 +1,9 @@
 <!-- the head section -->
 <head>
-<title>My PHP CRUD App</title>
+<title><img src="./images/lifestyle.jpg"/></title>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <!-- the body section -->
 <body>
-<header><h1>My PHP CRUD app</h1></header>
+<header class="header"><img class="logo" src="./images/lifestyle.jpg"/></header>

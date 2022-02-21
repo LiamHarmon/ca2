@@ -27,7 +27,7 @@ include('includes/header.php');
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name" required>
             <br>
 
             <label>List Price:</label>
@@ -35,7 +35,7 @@ include('includes/header.php');
             <br>        
             
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*"/>
             <br>
             
             <label>&nbsp;</label>
