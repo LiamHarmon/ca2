@@ -67,6 +67,8 @@ include('includes/header.php');
 <th>Image</th>
 <th>Name</th>
 <th>Price</th>
+<th>Description</th>
+<th>Sizes In Stock<th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
