@@ -27,12 +27,20 @@ include('includes/header.php');
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" name="name" required>
+            <input type="text" name="name" required>
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price">
-            <br>        
+            <input type="number" name="price">
+            <br> 
+            
+            <label>Description:</label>
+            <input type="text" name="description">
+            <br>
+
+            <label>Size:</label>
+            <input type="number" name="size">
+            <br>
             
             <label>Image:</label>
             <input type="file" name="image" accept="image/*"/>

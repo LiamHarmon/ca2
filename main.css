@@ -97,6 +97,8 @@ td {
     vertical-align: top;
     text-align: left;
 }
+tr:nth-child(even) {background: #CCC}
+
 form {
     margin: 0;
 }
