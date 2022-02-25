@@ -42,7 +42,6 @@ $statement3->closeCursor();
 <?php
 include('includes/header.php');
 ?>
-<h1>Record List</h1>
 
 <aside>
 <!-- display a list of categories -->
