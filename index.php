@@ -45,32 +45,40 @@ include('includes/header.php');
 
 <aside>
 <!-- display a list of categories -->
-<h2>Categories</h2>
-<nav>
-<ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Categories</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+    <?php foreach ($categories as $category) : ?>
+<li class="nav-link"><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+<?php  echo $category['categoryName']; ?>
 </a>
 </li>
 <?php endforeach; ?>
-</ul>
-</nav>          
+    </ul>
+  </div>
+</nav>         
 </aside>
-
 <section>
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
-<table>
+<div class="table-responive-sm">
+<table class="table table-hover">
+<thead>
 <tr>
-<th>Image</th>
-<th>Name</th>
-<th>Price</th>
-<th>Description</th>
-<th>Sizes In Stock</th>
-<th>Delete</th>
-<th>Edit</th>
+<th scope="col">Image</th>
+<th scope="col">Name</th>
+<th scope="col">Price</th>
+<th scope="col">Description</th>
+<th scope="col">Sizes In Stock</th>
+<th scope="col">Delete</th>
+<th scope="col">Edit</th>
 </tr>
+</thead>
+</div>
 <?php foreach ($records as $record) : ?>
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
@@ -84,7 +92,7 @@ id="delete_record_form">
 value="<?php echo $record['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
+<button type="submit" class="btn btn-outline-danger" value="Delete">Delete</button>
 </form></td>
 <td><form action="edit_record_form.php" method="post"
 id="delete_record_form">
@@ -92,13 +100,15 @@ id="delete_record_form">
 value="<?php echo $record['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
+<button type="submit" class="btn btn-outline-primary" value="Edit">Edit</button>
 </form></td>
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
+<a href="add_record_form.php"><button class="btn btn-outline-primary">Add Record</button></a>
+<p></p>
+<a href="category_list.php"><button class="btn btn-outline-primary">Manage Categories</button></a>
+<p></p>
 </section>
 <?php
 include('includes/footer.php');

@@ -4,6 +4,8 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$description = filter_input(INPUT_POST, 'description');
+$sizes_in_stock = filter_input(INPUT_POST, 'sizes_in_stock', FILTER_VALIDATE_INT);
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
@@ -63,14 +65,16 @@ if ($category_id == null || $category_id == false ||
 
     // Add the product to the database 
     $query = "INSERT INTO records
-                 (categoryID, name, price, image)
+                 (categoryID, name, price, image, description, sizes_in_stock)
               VALUES
-                 (:category_id, :name, :price, :image)";
+                 (:category_id, :name, :price, :image, :description, :sizes_in_stock)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':image', $image);
+    $statement->bindValue(':description', $description);
+    $statement->bindValue(':sizes_in_stock', $sizes_in_stock);
     $statement->execute();
     $statement->closeCursor();
 

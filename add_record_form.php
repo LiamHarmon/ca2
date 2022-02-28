@@ -39,7 +39,7 @@ include('includes/header.php');
             <br>
 
             <label>Size:</label>
-            <input type="number" name="size">
+            <input type="number" name="sizes_in_stock">
             <br>
             
             <label>Image:</label>
