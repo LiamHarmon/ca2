@@ -1,5 +1,5 @@
 # Mens Footwear
-A starter project for DkIT students on the Server-Side module.
+My PHP website for Mens Footwear.
 ### Instructions
 * Create a MySQL database called php-crud in PHP MyAdmin
 * Run the code in the sql-db.txt file in PHP MyAdmin
