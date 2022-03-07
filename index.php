@@ -37,28 +37,50 @@ $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
+
+
 ?>
-<div class="container">
+<div class="main-container">
 <?php
 include('includes/header.php');
 ?>
 
+
+
 <aside>
 <!-- display a list of categories -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Categories</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-    <?php foreach ($categories as $category) : ?>
-<li class="nav-link"><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php  echo $category['categoryName']; ?>
-</a>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Shoes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <?php foreach ($categories as $category) : ?>
+      <a class="dropdown-item" href=".?category_id=<?php echo $category['categoryID']; ?>"><?php  echo $category['categoryName']; ?></a>
+      <?php endforeach; ?>
+</div>
 </li>
-<?php endforeach; ?>
+
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="category_list.php">Manage Catagorie</a>
+          <a class="dropdown-item" href="add_record_form.php">Add Record</a>
+          
+        </div>
+      </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0" method="post" action="form.php">
+      <input class="form-control mr-sm-2" type="text" name="search" required>
+      <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">
+    </form>
   </div>
 </nav>         
 </aside>
@@ -73,7 +95,7 @@ include('includes/header.php');
 <th scope="col">Name</th>
 <th scope="col">Price</th>
 <th scope="col">Description</th>
-<th scope="col">Sizes In Stock</th>
+<th scope="col">Sizes</th>
 <th scope="col">Delete</th>
 <th scope="col">Edit</th>
 </tr>
