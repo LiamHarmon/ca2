@@ -78,7 +78,7 @@ include('includes/header.php');
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" action="form.php">
-      <input class="form-control mr-sm-2" type="text" name="search" required>
+      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Product" required>
       <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">
     </form>
   </div>
@@ -86,7 +86,7 @@ include('includes/header.php');
 </aside>
 <section>
 <!-- display a table of records -->
-<h2><?php echo $category_name; ?></h2>
+<h2 class="category_name"><?php echo $category_name; ?></h2>
 <div class="table-responive-sm">
 <table class="table table-hover">
 <thead>
@@ -103,7 +103,7 @@ include('includes/header.php');
 </div>
 <?php foreach ($records as $record) : ?>
 <tr>
-<td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
+<td><img class="product_image" src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
 <td class="right"><?php echo $record['price']; ?></td>
 <td><?php echo $record['description']; ?></td>
@@ -127,10 +127,6 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<a href="add_record_form.php"><button class="btn btn-outline-primary">Add Record</button></a>
-<p></p>
-<a href="category_list.php"><button class="btn btn-outline-primary">Manage Categories</button></a>
-<p></p>
 </section>
 <?php
 include('includes/footer.php');

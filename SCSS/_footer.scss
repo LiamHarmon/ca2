@@ -4,4 +4,10 @@ footer{
     color: $white;
     background-color: $richblue;
     height: 50px;
+    position:absolute;
+    width: 100%;
+    .footer-text{
+        text-align: center;;
+    }
 }
+

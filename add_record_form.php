@@ -74,8 +74,7 @@ include('includes/header.php');
             <button class="btn btn-outline-primary" type="submit" value="Add Record">Add Record</button>
             </div>
         </form>
-        <p><a href="index.php"> <button class="btn btn-outline-danger">Cancel</button></a></p>
-
+        <a href="index.php"> <button class="btn btn-outline-danger">Cancel</button></a>
     <?php
 include('includes/footer.php');
 ?>

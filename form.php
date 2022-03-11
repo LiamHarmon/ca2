@@ -8,7 +8,11 @@ if (isset($_POST["search"])) {
 }
   
 ?>
-
+<div class="main-container">
+<?php
+include('includes/header.php');
+?>
+<h2>Search Results</h2>
 
 <table class="table table-hover">
 <thead>
@@ -28,3 +32,9 @@ if (isset($_POST["search"])) {
 <td class="right"><?php echo $r['sizes_in_stock']; ?></td>
   </tr>
   </table>
+
+  <p><a href="index.php"><button class="btn btn-outline-primary">Home Page</button></a></p>
+</div>
+<?php
+include('includes/footer.php');
+?>
