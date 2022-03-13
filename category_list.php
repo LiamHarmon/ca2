@@ -43,6 +43,7 @@ include('includes/header.php');
 
         <label for="formGroupExampleInput2">Name:</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" name="name">
+        <br>
         <input id="add_category_button" class="btn btn-outline-primary" type="submit" value="Add">
     </form>
     <br>

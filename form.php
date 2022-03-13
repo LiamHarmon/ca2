@@ -13,8 +13,8 @@ if (isset($_POST["search"])) {
 <?php
 include('includes/header.php');
 ?>
-<h2>Search Results</h2>
-
+<h2 class="search-title">Search Results</h2>
+<div class="table-responive-sm">
 <table class="table table-hover">
 <thead>
 <tr>
@@ -33,6 +33,7 @@ include('includes/header.php');
 <td class="right"><?php echo $r['sizes_in_stock']; ?></td>
   </tr>
   </table>
+</div>
 
   <p><a href="index.php"><button class="btn btn-outline-primary">Home Page</button></a></p>
 </div>

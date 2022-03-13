@@ -1,10 +1,10 @@
 <?php
 // (A) DATABASE CONFIG - CHANGE TO YOUR OWN!
 define("DB_HOST", "localhost");
-define("DB_NAME", "shop-images");
+define("DB_NAME", "D00236258");
 define("DB_CHARSET", "utf8");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
+define("DB_USER", "D00236258");
+define("DB_PASSWORD", "kQTGtUS0");
  
 // (B) CONNECT TO DATABASE
 try {

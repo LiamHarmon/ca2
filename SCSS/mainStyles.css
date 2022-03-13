@@ -33,6 +33,12 @@ body {
   padding: 5px;
 }
 
+.search-title {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+}
+
 /* Headers Styles Go Here */
 header {
   background-color: #001689;
