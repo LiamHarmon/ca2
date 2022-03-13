@@ -5,7 +5,7 @@ $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 $description = filter_input(INPUT_POST, 'description');
-$sizes_in_stock = filter_input(INPUT_POST, 'sizes_in_stock', FILTER_VALIDATE_INT);
+$sizes_in_stock = filter_input(INPUT_POST, 'sizes_in_stock');
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
@@ -72,9 +72,9 @@ if ($category_id == null || $category_id == false ||
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':price', $price);
-    $statement->bindValue(':image', $image);
     $statement->bindValue(':description', $description);
     $statement->bindValue(':sizes_in_stock', $sizes_in_stock);
+    $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();
 

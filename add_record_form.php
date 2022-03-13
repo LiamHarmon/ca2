@@ -14,7 +14,7 @@ $statement->closeCursor();
 include('includes/header.php');
 ?>
         <h1 class="add-title">Add Record</h1>
-        <form class="add-form" action="add_record.php" method="post" enctype="multipart/form-data"
+        <form class="add-form" action="add_record.php" method="POST" enctype="multipart/form-data"
               id="add_record_form" >
 
               <div class="form-group">
@@ -29,23 +29,23 @@ include('includes/header.php');
             </div>
 <div class="form-group">
     <label for="formGroupExampleInput">Name</label>
-    <input type="text" name="name" id="name" class="form-control" id="formGroupExampleInput" placeholder="Name" onBlur="productName_validation();" /><span id="name_err"></span>
+    <input type="text" name="name" class="form-control" placeholder="Name" id="name" onBlur="productName_validation();"><span id="name_err"></span></li>
   </div>
 
             
   <div class="form-group">
     <label for="formGroupExampleInput2">Price</label>
-    <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Price">
+    <input type="number" name="price" class="form-control" placeholder="Price" id="price" onBlur="productPrice_validation();"><span id="price_err"></span></li>
   </div>
             
   <div class="form-group">
     <label for="formGroupExampleInput2">Description</label>
-    <input type="text" name="description" id="description" class="form-control" id="formGroupExampleInput2" placeholder="Description" onBlur="productDescription_validation();" /><span id="desc_err"></span>
+    <input type="text" name="description" class="form-control" placeholder="Description" id="description" onBlur="productDescription_validation();"><span id="desc_err"></span></li>
   </div>
 
             <div class="form-group">
             <label for="exampleFormControlSelect2">Shoe Size</label>
-            <select class="form-control" id="exampleFormControlSelect2">
+            <select class="form-control" name="sizes_in_stock" id="exampleFormControlSelect2">
             <option>1</option>
             <option>2</option>
             <option>3</option>
