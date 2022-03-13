@@ -10,7 +10,7 @@
     $statement->closeCursor();
 ?>
 <!-- the head section -->
-<div class="categor-container">
+<div class="category-container">
 <?php
 include('includes/header.php');
 ?>
@@ -43,10 +43,10 @@ include('includes/header.php');
 
         <label for="formGroupExampleInput2">Name:</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" name="name">
-        <input id="add_category_button" type="submit" value="Add">
+        <input id="add_category_button" class="btn btn-outline-primary" type="submit" value="Add">
     </form>
     <br>
-    <p><a href="index.php">Homepage</a></p>
+    <p><a href="index.php"><button class="btn btn-outline-danger">Cancel</button></a></p>
         </div>
     <?php
 include('includes/footer.php');

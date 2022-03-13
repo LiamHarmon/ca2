@@ -24,7 +24,7 @@ function productName_validation(){
         var description_name = document.getElementById("description");
         var description_value = document.getElementById("description").value;
         var description_length = description_value.length;
-        var letters = /^[-@.,'\/#&+\w\s]*$/;
+        var letters = /^[-@.,'%$\/#&+\w\s]*$/;
         if(description_length < 50 || !description_value.match(letters))
         {
         document.getElementById('desc_err').innerHTML = 'Product Description must contain letters and can contain alphanumeric characters as well.';
