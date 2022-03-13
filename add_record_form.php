@@ -29,7 +29,7 @@ include('includes/header.php');
             </div>
 <div class="form-group">
     <label for="formGroupExampleInput">Name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" required>
+    <input type="text" name="name" id="name" class="form-control" id="formGroupExampleInput" placeholder="Name" onBlur="productName_validation();" /><span id="name_err"></span>
   </div>
 
             
@@ -40,7 +40,7 @@ include('includes/header.php');
             
   <div class="form-group">
     <label for="formGroupExampleInput2">Description</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Description">
+    <input type="text" name="description" id="description" class="form-control" id="formGroupExampleInput2" placeholder="Description" onBlur="productDescription_validation();" /><span id="desc_err"></span>
   </div>
 
             <div class="form-group">

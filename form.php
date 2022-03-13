@@ -8,6 +8,7 @@ if (isset($_POST["search"])) {
 }
   
 ?>
+<section>
 <div class="main-container">
 <?php
 include('includes/header.php');
@@ -35,6 +36,7 @@ include('includes/header.php');
 
   <p><a href="index.php"><button class="btn btn-outline-primary">Home Page</button></a></p>
 </div>
+</section>
 <?php
 include('includes/footer.php');
 ?>
