@@ -13,7 +13,7 @@ function productName_validation(){
     }
     else
     {
-    document.getElementById('name_err').innerHTML = 'Valid username';
+    document.getElementById('name_err').innerHTML = 'Valid Product Name';
     document.getElementById('name_err').style.color = "#00AF33";
     }
     }
@@ -33,7 +33,7 @@ function productName_validation(){
         }
         else
         {
-        document.getElementById('desc_err').innerHTML = 'Valid description';
+        document.getElementById('desc_err').innerHTML = 'Valid Product Description';
         document.getElementById('desc_err').style.color = "#00AF33";
         }
         }
@@ -51,7 +51,7 @@ function productName_validation(){
         }
         else
         {
-        document.getElementById('price_err').innerHTML = 'Valid Price';
+        document.getElementById('price_err').innerHTML = 'Valid Product Price';
         document.getElementById('price_err').style.color = "#00AF33";
         }
         }

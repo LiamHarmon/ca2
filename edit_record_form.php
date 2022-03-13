@@ -45,20 +45,20 @@ include('includes/header.php');
 
        <div class="form-group">
     <label for="formGroupExampleInput">Name:</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" name="name"
-                   value="<?php echo $records['name']; ?>">
+    <input type="text" class="form-control" name="name"
+                   value="<?php echo $records['name']; ?>" id="name" onBlur="productName_validation();"><span id="name_err"></span></li>
        </div>
 
        <div class="form-group">
     <label for="formGroupExampleInput">List Price:</label>
-    <input type="number" class="form-control" id="formGroupExampleInput2" name="price"
-                   value="<?php echo $records['price']; ?>">
+    <input type="number" class="form-control" name="price"
+                   value="<?php echo $records['price']; ?>" id="price" onBlur="productPrice_validation();"><span id="price_err"></span></li>
        </div>
 
        <div class="form-group">
     <label for="formGroupExampleInput">Description:</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" name="description"
-                   value="<?php echo $records['description']; ?>">
+    <input type="text" class="form-control" name="description"
+                   value="<?php echo $records['description']; ?>" id="description" onBlur="productDescription_validation();"><span id="desc_err"></span></li>
        </div>
 
        <div class="form-group">
